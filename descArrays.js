@@ -200,12 +200,17 @@ function resetBgColours(){
 };
 
 var homeworldArray = [
+//Core rules
 ['s', 't', 'infl', 9, ["s", "t", "infl"], 4, 2, 3],     //Feral
 ['t', 'int', 'fel', 8, ["fel", "t", "int"], 6, 3, 8],   //Forge
 ['fel', 'infl', 't', 9, ["fel", "t", "infl"], 9, 4, 10], //High
 ['ag', 'per', 'wp', 8, ["ag", "per", "wp"], 7, 2, 6],   //Hive
 ['wp', 'fel', 'per', 7, ["wp", "fel", "per"], 8, 3, 6], //Shrine
 ['int', 'wp', 's', 7, ["int", "wp", "s"], 6, 3, 5],     //Void
+//Enemies Beyond
+['per', 'wp', 'fel', 8, ["per", "wp", "fel"], 8, 3, 4], //Deamon
+['t', 'per', 'infl', 7, ["t", "per", "infl"], 4, 3, 5], //Penal
+['bs', 'int', 's', 7, ["bs", "int", "s"], 6, 3, 5], //Quarantine
 ]; 
 
 function setHomeworld(index) {
@@ -225,7 +230,7 @@ function rollStats(worldType){
   switch (worldType)
   {           
     case "1":
-		$("#tbody_worldtalents").append("<tr><td><i>Technical Knock OR Weapon-Tech</i></td></tr>");    
+		$("#tbody_worldtalents").end("<tr><td><i>Technical Knock OR Weapon-Tech</i></td></tr>");    
 		break;    
           
     case "5": //Void
